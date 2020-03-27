@@ -55,7 +55,7 @@ port( address : in std_logic_vector(7 downto 0);
 end component;
 
 component rw is
-port( w: in std_logic;
+port( w: in std_logic:='1';
       address: in std_logic_vector(7 downto 0);
 		clock: in std_logic;
 		data_in: in std_logic_vector(7 downto 0);
