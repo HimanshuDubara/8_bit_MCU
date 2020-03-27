@@ -33,7 +33,7 @@ end if;
 end process;
 
 -- port_out(1) description : ADDRESS x"E1"
-U3 : process (clock, reset)
+ process (clock, reset)
 begin
 if (reset = '0') then
 port_out01 <= x"00";
@@ -45,7 +45,7 @@ end if;
 end process;
 
 -- port_out(2) description : ADDRESS x"E2"
-U3 : process (clock, reset)
+U34: process (clock, reset)
 begin
 if (reset = '0') then
 port_out02 <= x"00";
@@ -57,7 +57,7 @@ end if;
 end process;
 
 -- port_out(3) description : ADDRESS x"E3"
-U3 : process (clock, reset)
+U38 : process (clock, reset)
 begin
 if (reset = '0') then
 port_out03 <= x"00";
@@ -69,7 +69,7 @@ end if;
 end process;
 
 -- port_out(4) description : ADDRESS x"E4"
-U3 : process (clock, reset)
+U39 : process (clock, reset)
 begin
 if (reset = '0') then
 port_out04 <= x"00";
@@ -81,7 +81,7 @@ end if;
 end process;
 
 -- port_out(5) description : ADDRESS x"E5"
-U3 : process (clock, reset)
+U30: process (clock, reset)
 begin
 if (reset = '0') then
 port_out05 <= x"00";
@@ -93,7 +93,7 @@ end if;
 end process;
 
 -- port_out(6) description : ADDRESS x"E6"
-U3 : process (clock, reset)
+U36 : process (clock, reset)
 begin
 if (reset = '0') then
 port_out06 <= x"00";
@@ -106,7 +106,7 @@ end process;
 
 
 -- port_out(7) description : ADDRESS x"E7"
-U3 : process (clock, reset)
+U45 : process (clock, reset)
 begin
 if (reset = '0') then
 port_out07 <= x"00";
@@ -118,7 +118,7 @@ end if;
 end process;
 
 -- port_out(8) description : ADDRESS x"E8"
-U3 : process (clock, reset)
+U56: process (clock, reset)
 begin
 if (reset = '0') then
 port_out08 <= x"00";
@@ -130,7 +130,7 @@ end if;
 end process;
 
 -- port_out(9) description : ADDRESS x"E9"
-U3 : process (clock, reset)
+U67 : process (clock, reset)
 begin
 if (reset = '0') then
 port_out09 <= x"00";
@@ -142,7 +142,7 @@ end if;
 end process;
 
 -- port_out(10) description : ADDRESS x"E10"
-U3 : process (clock, reset)
+U78 : process (clock, reset)
 begin
 if (reset = '0') then
 port_out10 <= x"00";
@@ -154,7 +154,7 @@ end if;
 end process;
 
 -- port_out(11) description : ADDRESS x"E11"
-U3 : process (clock, reset)
+U89 : process (clock, reset)
 begin
 if (reset = '0') then
 port_out11 <= x"00";
@@ -166,7 +166,7 @@ end if;
 end process;
 
 -- port_out(12) description : ADDRESS x"E12"
-U3 : process (clock, reset)
+U76 : process (clock, reset)
 begin
 if (reset = '0') then
 port_out12 <= x"00";
@@ -178,7 +178,7 @@ end if;
 end process;
 
 -- port_out(13) description : ADDRESS x"E13"
-U3 : process (clock, reset)
+U90 : process (clock, reset)
 begin
 if (reset = '0') then
 port_out13 <= x"00";
@@ -190,7 +190,7 @@ end if;
 end process;
 
 -- port_out(14) description : ADDRESS x"E14"
-U3 : process (clock, reset)
+U66 : process (clock, reset)
 begin
 if (reset = '0') then
 port_out14 <= x"00";
@@ -202,7 +202,7 @@ end if;
 end process;
 
 -- port_out(15) description : ADDRESS x"E15"
-U3 : process (clock, reset)
+U43 : process (clock, reset)
 begin
 if (reset = '0') then
 port_out15 <= x"00";
