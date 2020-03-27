@@ -6,7 +6,7 @@ port( BUS2: in std_logic_vector(7 downto 0);
 		Clock: in std_logic;
 		Reset: in std_logic;
 		A: out std_logic_vector(7 downto 0);
-		A_Load: std_logic);
+		A_Load: in std_logic);
 end RegisterA;
 		
 architecture RegisterA1 of RegisterA is
