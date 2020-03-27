@@ -2,19 +2,29 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.NUMERIC_STD.ALL;
 
-
-
-
 entity outports is
-
-
 port( 
 		address: in std_logic_vector(7 downto 0);
       clock: in std_logic;
 		data_in: in std_logic_vector(7 downto 0);
 		w: in std_logic;
 		reset: in std_logic;
-		port_out00,port_out01,port_out02,port_out03,port_out04,port_out05,port_out06,port_out07,port_out08,port_out09,port_out10,port_out11,port_out12,port_out13,port_out14,port_out15:out std_logic_vector(7  downto 0)
+         port_out_00: out std_logic_vector(7 downto 0);
+        port_out_01: out std_logic_vector(7 downto 0);
+        port_out_02: out std_logic_vector(7 downto 0);
+        port_out_03: out std_logic_vector(7 downto 0);
+        port_out_04: out std_logic_vector(7 downto 0);
+        port_out_05: out std_logic_vector(7 downto 0);
+        port_out_06: out std_logic_vector(7 downto 0);
+        port_out_07: out std_logic_vector(7 downto 0);
+        port_out_08: out std_logic_vector(7 downto 0);
+        port_out_09: out std_logic_vector(7 downto 0);
+        port_out_10: out std_logic_vector(7 downto 0);
+        port_out_11: out std_logic_vector(7 downto 0);
+        port_out_12: out std_logic_vector(7 downto 0);
+        port_out_13: out std_logic_vector(7 downto 0);
+        port_out_14: out std_logic_vector(7 downto 0);
+        port_out_15: out std_logic_vector(7 downto 0) 
 	);
 end outports;
 architecture outports1 of outports is
@@ -24,10 +34,10 @@ begin
 U3 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out00 <= x"00";
+port_out_00 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E0" and w = '1') then
-port_out00 <= data_in;
+port_out_00 <= data_in;
 end if;
 end if;
 end process;
@@ -36,10 +46,10 @@ end process;
  process (clock, reset)
 begin
 if (reset = '0') then
-port_out01 <= x"00";
+port_out_01 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E1" and w = '1') then
-port_out01 <= data_in;
+port_out_01 <= data_in;
 end if;
 end if;
 end process;
@@ -48,10 +58,10 @@ end process;
 U34: process (clock, reset)
 begin
 if (reset = '0') then
-port_out02 <= x"00";
+port_out_02 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E2" and w = '1') then
-port_out02 <= data_in;
+port_out_02 <= data_in;
 end if;
 end if;
 end process;
@@ -60,10 +70,10 @@ end process;
 U38 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out03 <= x"00";
+port_out_03 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E3" and w = '1') then
-port_out03 <= data_in;
+port_out_03 <= data_in;
 end if;
 end if;
 end process;
@@ -72,10 +82,10 @@ end process;
 U39 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out04 <= x"00";
+port_out_04 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E4" and w = '1') then
-port_out04 <= data_in;
+port_out_04 <= data_in;
 end if;
 end if;
 end process;
@@ -84,10 +94,10 @@ end process;
 U30: process (clock, reset)
 begin
 if (reset = '0') then
-port_out05 <= x"00";
+port_out_05 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E5" and w = '1') then
-port_out06 <= data_in;
+port_out_05 <= data_in;
 end if;
 end if;
 end process;
@@ -96,10 +106,10 @@ end process;
 U36 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out06 <= x"00";
+port_out_06 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E6" and w = '1') then
-port_out06 <= data_in;
+port_out_06 <= data_in;
 end if;
 end if;
 end process;
@@ -109,10 +119,10 @@ end process;
 U45 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out07 <= x"00";
+port_out_07 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E7" and w = '1') then
-port_out07 <= data_in;
+port_out_07 <= data_in;
 end if;
 end if;
 end process;
@@ -121,10 +131,10 @@ end process;
 U56: process (clock, reset)
 begin
 if (reset = '0') then
-port_out08 <= x"00";
+port_out_08 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E8" and w = '1') then
-port_out08 <= data_in;
+port_out_08 <= data_in;
 end if;
 end if;
 end process;
@@ -133,10 +143,10 @@ end process;
 U67 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out09 <= x"00";
+port_out_09 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E9" and w = '1') then
-port_out09 <= data_in;
+port_out_09 <= data_in;
 end if;
 end if;
 end process;
@@ -145,10 +155,10 @@ end process;
 U78 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out10 <= x"00";
+port_out_10 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E10" and w = '1') then
-port_out10 <= data_in;
+port_out_10 <= data_in;
 end if;
 end if;
 end process;
@@ -157,10 +167,10 @@ end process;
 U89 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out11 <= x"00";
+port_out_11 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E11" and w = '1') then
-port_out11 <= data_in;
+port_out_11 <= data_in;
 end if;
 end if;
 end process;
@@ -169,10 +179,10 @@ end process;
 U76 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out12 <= x"00";
+port_out_12 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E12" and w = '1') then
-port_out12 <= data_in;
+port_out_12 <= data_in;
 end if;
 end if;
 end process;
@@ -181,10 +191,10 @@ end process;
 U90 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out13 <= x"00";
+port_out_13 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E13" and w = '1') then
-port_out13 <= data_in;
+port_out_13 <= data_in;
 end if;
 end if;
 end process;
@@ -193,10 +203,10 @@ end process;
 U66 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out14 <= x"00";
+port_out_14 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E14" and w = '1') then
-port_out14 <= data_in;
+port_out_14 <= data_in;
 end if;
 end if;
 end process;
@@ -205,10 +215,10 @@ end process;
 U43 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out15 <= x"00";
+port_out_15 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E15" and w = '1') then
-port_out15 <= data_in;
+port_out_15 <= data_in;
 end if;
 end if;
 end process;
