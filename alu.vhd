@@ -43,14 +43,21 @@ entity alu is
     
 end alu;
 
-architecture alu_arch of alu is
+architecture behavioural of alu is
     
     signal sum : std_logic_vector(8 downto 0);
     signal result,temp: std_logic_vector(7 downto 0);
     signal N,Z,V,C: std_logic;
+--    signal L,K:unsigned;
+    signal E,D:unsigned(7 downto 0);
     begin
+    
     process(A,B,ALU_sel)
+    
     begin
+--    E<=unsigned(A);
+--    D<=unsigned(B);
+--    L<=unsigned(1);
         sum <= "000000000";
     case ALU_sel is
         when "0000" => 
@@ -76,20 +83,36 @@ architecture alu_arch of alu is
 		  when "1001" =>
             result <= B - x"1";
 		  when "1010"=>
-				result<= A sll 1;
+				result<= std_logic_vector(shift_left(unsigned(A),1));
 		  when "1011"=>
-				result<= B sll 1;
+				result<= std_logic_vector(shift_left(unsigned(B),1));
 		  when "1100"=>
-				result<= A srl 1;
+				result<=std_logic_vector(shift_right(unsigned(A),1));
 		 when "1101"=>
-				result<= B srl 1;
+				result<=std_logic_vector(shift_right(unsigned(B),1));
 		  when others =>
 				result<="00000000";
 		 
 --            temp <= A;
+
+            
 --            A <= B;
 --            B <= temp;
          end case;
+         
+         
+--         case ALU_SEL is
+----         when "1010" =>
+----            result<=std_logic_vector(E) and "11111111";
+--         when "1011" =>
+--            result<=std_logic_vector(E);
+--         when "1100" =>
+--            result<=std_logic_vector(E);
+--         when "1101" =>
+--            result<=std_logic_vector(E);
+--         when others=>
+--            E<="00000000";
+--         end case;
          end process;
        --Flags
        ALU_result<=result;
@@ -108,4 +131,4 @@ architecture alu_arch of alu is
             '0' when others;
        NZVC <= N&Z&V&C;
 
-end alu_arch;
+end behavioural;
