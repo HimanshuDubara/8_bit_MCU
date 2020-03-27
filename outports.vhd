@@ -7,7 +7,6 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity outports is
 
-type portout1 is array (0 to 15) of std_logic_vector(7 downto 0); 
 
 port( 
 		address: in std_logic_vector(7 downto 0);
@@ -15,7 +14,8 @@ port(
 		data_in: in std_logic_vector(7 downto 0);
 		w: in std_logic;
 		reset: in std_logic;
-		portout: out portout1);
+		port_out00,port_out01,port_out02,port_out03,port_out04,port_out05,port_out06,port_out07,port_out08,port_out09,port_out10,port_out11,port_out12,port_out13,port_out14,port_out15:out std_logic_vector(7  downto 0)
+	);
 end outports;
 architecture outports1 of outports is
 begin
@@ -24,10 +24,10 @@ begin
 U3 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out(0) <= x"00";
+port_out00 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E0" and w = '1') then
-port_out(0) <= data_in;
+port_out00 <= data_in;
 end if;
 end if;
 end process;
@@ -36,10 +36,10 @@ end process;
 U3 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out(1) <= x"00";
+port_out01 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E1" and w = '1') then
-port_out(1) <= data_in;
+port_out01 <= data_in;
 end if;
 end if;
 end process;
@@ -48,10 +48,10 @@ end process;
 U3 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out(2) <= x"00";
+port_out02 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E2" and w = '1') then
-port_out(2) <= data_in;
+port_out02 <= data_in;
 end if;
 end if;
 end process;
@@ -60,10 +60,10 @@ end process;
 U3 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out(3) <= x"00";
+port_out03 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E3" and w = '1') then
-port_out(3) <= data_in;
+port_out03 <= data_in;
 end if;
 end if;
 end process;
@@ -72,10 +72,10 @@ end process;
 U3 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out(4) <= x"00";
+port_out04 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E4" and w = '1') then
-port_out(4) <= data_in;
+port_out04 <= data_in;
 end if;
 end if;
 end process;
@@ -84,10 +84,10 @@ end process;
 U3 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out(5) <= x"00";
+port_out05 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E5" and w = '1') then
-port_out(5) <= data_in;
+port_out06 <= data_in;
 end if;
 end if;
 end process;
@@ -96,10 +96,10 @@ end process;
 U3 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out(6) <= x"00";
+port_out06 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E6" and w = '1') then
-port_out(6) <= data_in;
+port_out06 <= data_in;
 end if;
 end if;
 end process;
@@ -109,10 +109,10 @@ end process;
 U3 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out(7) <= x"00";
+port_out07 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E7" and w = '1') then
-port_out(7) <= data_in;
+port_out07 <= data_in;
 end if;
 end if;
 end process;
@@ -121,10 +121,10 @@ end process;
 U3 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out(8) <= x"00";
+port_out08 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E8" and w = '1') then
-port_out(8) <= data_in;
+port_out08 <= data_in;
 end if;
 end if;
 end process;
@@ -133,10 +133,10 @@ end process;
 U3 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out(9) <= x"00";
+port_out09 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E9" and w = '1') then
-port_out(9) <= data_in;
+port_out09 <= data_in;
 end if;
 end if;
 end process;
@@ -145,10 +145,10 @@ end process;
 U3 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out(10) <= x"00";
+port_out10 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E10" and w = '1') then
-port_out(10) <= data_in;
+port_out10 <= data_in;
 end if;
 end if;
 end process;
@@ -157,10 +157,10 @@ end process;
 U3 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out(11) <= x"00";
+port_out11 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E11" and w = '1') then
-port_out(11) <= data_in;
+port_out11 <= data_in;
 end if;
 end if;
 end process;
@@ -169,10 +169,10 @@ end process;
 U3 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out(12) <= x"00";
+port_out12 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E12" and w = '1') then
-port_out(12) <= data_in;
+port_out12 <= data_in;
 end if;
 end if;
 end process;
@@ -181,10 +181,10 @@ end process;
 U3 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out(13) <= x"00";
+port_out13 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E13" and w = '1') then
-port_out(13) <= data_in;
+port_out13 <= data_in;
 end if;
 end if;
 end process;
@@ -193,10 +193,10 @@ end process;
 U3 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out(14) <= x"00";
+port_out14 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E14" and w = '1') then
-port_out(14) <= data_in;
+port_out14 <= data_in;
 end if;
 end if;
 end process;
@@ -205,10 +205,10 @@ end process;
 U3 : process (clock, reset)
 begin
 if (reset = '0') then
-port_out(15) <= x"00";
+port_out15 <= x"00";
 elsif (clock'event and clock='1') then
 if (address = x"E15" and w = '1') then
-port_out(15) <= data_in;
+port_out15 <= data_in;
 end if;
 end if;
 end process;
