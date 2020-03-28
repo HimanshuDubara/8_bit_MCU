@@ -29,6 +29,6 @@ end if;
 end if;
 end process; 
 
-PC <= std_logic_vector(PC_uns);
+PC <=PC_uns;
 end PROGRAM_COUNTER1;		
 		
