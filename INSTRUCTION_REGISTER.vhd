@@ -7,12 +7,12 @@ port( BUS2: in std_logic_vector(7 downto 0);
 		Reset: in std_logic;
 		IR_Load: in std_logic;
 		IR: out std_logic_vector(7 downto 0));
-
+end INSTRUCTION_REGISTER;
 architecture IR1 of INSTRUCTION_REGISTER is
 begin
 INSTRUCTION_REGISTER : process (Clock, Reset)
 begin
-if (Reset == '0') then
+if (Reset = '0') then
 IR <= x"00";
 elsif (Clock'event and Clock = '1') then
 if (IR_Load= '1') then
